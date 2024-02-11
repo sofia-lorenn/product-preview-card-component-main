@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+
+:root{
+    /* Colors Variables */
+    --clr-cyan: hsl(158, 36%, 37%);
+    --clr-cream: hsl(30, 38%, 92%);
+    --clr-dark-blue: hsl(212, 21%, 14%);
+    --clr-Dark-grayish: hsl(228, 12%, 48%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-lite-cyan: hsl(158, 36%, 40%);
+    /* Fonts Variables */
+    --font-Montserrat: "Montserrat" , sans-serif;
+    --font-Fraunces: "Fraunces", serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-cream);
+}
+
+.preview-card{
+    display: flex;
+    width: 40%;
+    height: 61vh;
+    background-color: var(--clr-white);
+    border-radius: 10px;
+
+}
+
+.preview-card-image{
+    background-image: url(./images/image-product-desktop.jpg);
+    width: 100%;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+     
+}
+
+.preview-card-description{
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    margin-left: 4%;
+    
+}
+p{
+    color: var(--clr-Dark-grayish);
+}
+.preview-card-description-perfum{
+    font-family: var(--font-Montserrat);
+    margin-top: 1rem;
+    text-transform: uppercase;
+
+
+}
+h1{
+    font-family: var(--font-Fraunces), sans-serif;
+    color: var(--clr-dark-blue);
+    margin-top: 1rem;
+}
+.preview-card-description-paragraph{
+    margin-top: 1rem;
+}
+
+.preview-card-price {
+    display: inline;
+    margin-top: 1rem;
+
+}
+.preview-card-price p,
+h1 {
+    display: inline;
+}
+
+.preview-card-price h1{
+    color: var(--clr-cyan);
+    margin-right: 20px;
+}
+.preview-card-price p{
+   text-decoration: line-through;
+  
+}
+#AddToCard{
+    width: 90%;
+    height: 40px;
+    background-color: var(--clr-cyan);
+    border: 0 solid var(--clr-cyan);
+    border-radius: 10px;
+    font-family: var(--font-Fraunces);
+    color: var(--clr-white);
+    margin-top: 1rem;
+   
+}
+#AddToCard:hover{
+    background-color: var(--clr-lite-cyan);
+}
+/* Responsive Mobile Design */
+@media (max-width:390px){
+    
+    .preview-card{
+        flex-direction: column; 
+        height: fit-content;
+        width: 300px;
+       
+    }
+    .preview-card preview-card-image{
+        
+        background-size: cover;
+        height: 100px;
+        
+    }
+
+    
+   
+}
+
+
